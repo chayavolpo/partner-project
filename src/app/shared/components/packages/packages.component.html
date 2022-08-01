@@ -1,0 +1,6 @@
+<p-carousel [value]="packages" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="false"
+  [responsiveOptions]="responsiveOptions" dir="ltr">
+  <ng-template let-package pTemplate="item">
+    <app-package [package]="package"></app-package>
+  </ng-template>
+</p-carousel>

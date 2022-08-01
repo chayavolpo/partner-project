@@ -1,0 +1,58 @@
+.advantage-container {
+  display: inline-flex;
+  align-items: center;
+  width: 300px;
+  @media (max-width: 980px) {
+    width: 200px;
+  }
+  margin-left: 10px;
+}
+
+.advantage-image {
+  padding-left: 0.5rem;
+}
+
+.advantage-container:hover > .advantage-image {
+  animation: wiggle;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.advantage-description {
+  font-family: 'simpler-regular';
+  font-size: 1rem;
+}
+
+// advantage keyframe
+@keyframes wiggle {
+
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+
+  15% {
+    transform: rotateZ(-15deg);
+  }
+
+  20% {
+    transform: rotateZ(10deg);
+  }
+
+  25% {
+    transform: rotateZ(-10deg);
+  }
+
+  30% {
+    transform: rotateZ(6deg);
+  }
+
+  35% {
+    transform: rotateZ(-4deg);
+  }
+
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}

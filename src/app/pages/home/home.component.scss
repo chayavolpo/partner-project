@@ -1,0 +1,47 @@
+:host{
+  height: 100%;
+  width: 100%;
+}
+
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  flex: 15%;
+  background-color: white;
+}
+
+.page-main-content {
+  flex: 62%;
+  background-image: url("/assets/images/packs_BG.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.page-footer {
+  flex: 23%;
+  background-color: white;
+}
+
+.header-text {
+  margin: 1.5% 18% 1.5% 0;
+}
+
+.small-title {
+  font-family: 'simpler-black';
+  font-size: 1.83rem;
+  margin: 0;
+}
+
+.large-title {
+  font-family: 'simpler-black';
+  font-size: 4.13rem;
+  margin: 0;
+  line-height: 0.8em;
+}
+
+

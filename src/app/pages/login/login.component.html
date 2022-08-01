@@ -1,0 +1,18 @@
+<div class="page-container">
+  <div class="partner-logo"></div>
+  <div class="login-card">
+    <div class="login-card-header">כניסה לאזור האישי</div>
+    <div class="login-card-content">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <input pInputText class="form-field" [class.form-field-invalid]="userName?.invalid && (userName?.dirty || userName?.touched)" id="userName" formControlName="userName" type="text" placeholder="שם משתמש">
+          <div *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)">
+            <div class="error-message" *ngIf="userName?.errors?.['required']">חובה להכניס שם משתמש</div>
+            <div class="error-message" *ngIf="userName?.errors?.['minlength']">נא להכניס 5 תווים לפחות</div>
+            <div class="error-message" *ngIf="userName?.errors?.['maxlength']">נא להכניס פחות מ - 10 תווים</div>
+            <div class="error-message" *ngIf="userName?.errors?.['pattern']">נא להכניס אותיות באנגלית ו/או עברית בלבד</div>
+          </div>
+        <button pButton type="submit" label="כניסה" [disabled]="loginForm.invalid"></button>
+      </form>
+    </div>
+  </div>
+</div>

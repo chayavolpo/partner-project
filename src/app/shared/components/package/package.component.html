@@ -1,0 +1,28 @@
+<div class="package-container">
+  <div *ngIf="package.isOnlineExclusive" class="online-exclusive-badge">
+    <p>בלעדי באתר!</p>
+  </div>
+  <div class="package-header">
+    <p class="package-title">החבילה ה{{package.packageType}}</p>
+    <p class="package-price-container logo-color-text">
+      <span class="price-units">₪</span>
+      <span class="letter-spacing">
+        <span class="package-price">{{getPriceWithOutRemainder()}}.</span>
+        <span class="package-price-remainder">{{getPriceRemainder()}}</span>
+      </span>
+    </p>
+    <p class="logo-color-text smaller-text">לחודש</p>
+  </div>
+  <div class="package-content">
+    <p class="regular-text" *ngIf="package.noSMSLimit && package.noCallsLimit && package.noMessagesLimit">ללא הגבלת SMS
+      שיחות והודעות</p>
+    <p class="package-gb">חבילת גלישה בנפח {{package.GBamount}}GB</p>
+    <p class="regular-text">{{package.advantage}}</p>
+    <div class="online-gift-container">
+      <img src="assets/images/gift_icon.png" />
+      <p class="order-online-exclusive">בלעדי למזמינים באתר</p>
+      <p class="order-online-gift">{{package.orderOnlineGift}}</p>
+    </div>
+    <button class="btn">להצטרפות >></button>
+  </div>
+</div>
